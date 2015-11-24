@@ -1,0 +1,21 @@
+%h2 Assignments
+
+= link_to "Create New Assignment", new_assignment_path
+
+%ul 
+  -@assignments.each do |assignment|
+    %li
+      = assignment.name
+      = assignment.requirements
+      = link_to "Edit", edit_assignment_path(assignment)
+      = link_to "Delete", assignment_path(assignment), method: :delete
+      = link_to "View More", assignment_path(assignment)
+   
+%br/
+ 
+
+
+
+
+
+/ workflow status

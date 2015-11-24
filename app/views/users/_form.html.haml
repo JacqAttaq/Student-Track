@@ -1,0 +1,32 @@
+
+
+= form_for @user do |f|
+  =f.label :name
+  =f.text_field :name
+  %br/
+  =f.label :github_name
+  =f.text_field :github_name
+  %br/
+
+  =f.submit
+
+  / =hidden_field_tag 'location[course_ids][]', ''
+
+
+  / %h4 Locations
+
+  / -@locations.each do |location|
+  /   %br/
+  /   = location.name
+
+
+  / %h4 Courses
+  / -@courses.each do |course|
+  /   %br/
+  /   = course.name
+
+
+
+
+
+// put location selection and admin status in
