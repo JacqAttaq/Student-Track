@@ -1,36 +1,15 @@
 == README
 
-Example:
 
-User_Course_Location -
-Ruby on Rails
-Charleston, SC
-Gunther Perk
 
-User signs in and can select class - interacts with assignments as student or teacher.
+Ruby Version - 2.2.0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Database - MySQL2
 
-Things you may want to cover:
+Testing with RSPEC - run bundle exec rspec
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 
 Please feel free to use a different markup language if you do not plan to run
