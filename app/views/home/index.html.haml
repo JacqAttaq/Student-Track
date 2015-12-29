@@ -1,6 +1,11 @@
 
 .container
-  = link_to "Locations", locations_path
-  = link_to "Courses", courses_path 
+  .row
+    .span6
+      %button.btn.btn-link{:type => "button"}
+      = link_to "Locations", locations_path 
+    .span6
+      %button.btn.btn-link{:type => "button"}
+      = link_to "Courses", courses_path 
 
 
