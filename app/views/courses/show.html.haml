@@ -6,6 +6,7 @@
   -@locations.each do |location|
     %li
       =location.name
+      = link_to "View", course_locations_path(@course_location)
       =location.city
       =location.state
 

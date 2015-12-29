@@ -4,6 +4,7 @@
 %ul
 -@courses.each do |course|
   %li
-    =course.name
+    =course.name 
+    = link_to "View", course_locations_path(@course_location)
     / add hover effect that shows description
-    
+
