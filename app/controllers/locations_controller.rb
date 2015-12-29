@@ -42,8 +42,7 @@ class LocationsController < ApplicationController
       :name,
       :city,
       :state,
-      course_ids: [],
-      location_ids: []
+      course_ids: []
       )
   end
 

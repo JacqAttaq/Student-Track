@@ -36,7 +36,8 @@ class CoursesController < ApplicationController
   def course_params
     params.require(:course).permit(
       :name,
-      :description
+      :description,
+      location_ids: []
       )
   end
 
