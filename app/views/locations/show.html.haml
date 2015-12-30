@@ -1,10 +1,10 @@
-=@location.name
+%h3=@location.name
 
 %h4 Courses
 %ul
 -@courses.each do |course|
   %li
     =course.name 
-    = link_to "View", course_locations_path(@course_location)
+    = link_to "View", course_locations_path(@course_location), class: "btn btn-success"
     / add hover effect that shows description - bs popover
 
