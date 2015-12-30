@@ -2,22 +2,23 @@ Rails.application.routes.draw do
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
 
   resources :users 
-  resources :assignments do
-    member do
-      post :create_comment
-    end
-    resources :submissions do 
-      member do
-        post :create_comment
-        patch :incomplete_submission
-        patch :complete_submission
-      end
-      resources :links
-    end
-  end
   resources :locations
   resources :courses
   resources :course_locations
+    resources :assignments do
+      member do
+        post :create_comment
+      end
+      resources :submissions do 
+        member do
+          post :create_comment
+          patch :incomplete_submission
+          patch :complete_submission
+        end
+        resources :links
+      end  
+  end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

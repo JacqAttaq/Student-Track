@@ -1,5 +1,5 @@
-=form_for[(@assignment,@submission)] do |f|
-  =f.label :content
-  =f.text_area :content
+= form_for([@assignment,@submission]) do |f|
+  %h6=f.url_field :content
+  %h6=f.submit
 
   

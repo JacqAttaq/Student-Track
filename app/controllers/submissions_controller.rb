@@ -9,17 +9,15 @@ class SubmissionsController < ApplicationController
   end
 
   def new 
-    @submission = Submission.new 
+    @submission =@assignment.submissions.new 
   end
 
   def create
-    
-    @assignment = Assignment.find params[:assignment_id]
-    @submission = @assignment.submissions.create sub_params
-    if @submission.save
+    @submission = @assignment.submission.create sub_params
+      if @submission.save
       flash[:notice] = 'Submission Success!'
-      redirect_to assignment_submissions_path(assignment)
-    else
+      redirect_to assignment_submissions_path
+      else
       flash[:error] = 'Sorry, Submission not Saved.'
       render :new 
     end
@@ -46,7 +44,7 @@ class SubmissionsController < ApplicationController
 
   def sub_params
     params.require(:submission).permit(
-      :name, 
+      :content, 
       user_id: [],
       assignment_id: []
       )
