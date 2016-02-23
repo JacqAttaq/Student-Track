@@ -6,7 +6,10 @@
   -@locations.each do |location|
     %li
       =location.name
-      = link_to "View", course_locations_path(@course_location)
+      %br
       =location.city
       =location.state
+      %br
+      = link_to "Enter", course_locations_path(@course_location),  class: 'btn btn-primary'
+      
 
